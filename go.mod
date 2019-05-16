@@ -14,8 +14,9 @@ require (
 	github.com/go-playground/locales v0.12.1 // indirect
 	github.com/go-playground/universal-translator v0.16.0 // indirect
 	github.com/go-sql-driver/mysql v1.4.1
-	github.com/gogo/protobuf v1.2.0
+	github.com/gogo/protobuf v1.2.1
 	github.com/golang/protobuf v1.2.0
+	github.com/kisielk/errcheck v1.2.0 // indirect
 	github.com/leodido/go-urn v1.1.0 // indirect
 	github.com/mattn/go-colorable v0.0.9 // indirect
 	github.com/mattn/go-isatty v0.0.4 // indirect
@@ -29,8 +30,11 @@ require (
 	github.com/stretchr/testify v1.3.0
 	github.com/tsuna/gohbase v0.0.0-20190201102810-d3184c1526df
 	github.com/urfave/cli v1.20.0
-	golang.org/x/net v0.0.0-20190311183353-d8887717615a
+	golang.org/x/crypto v0.0.0-20190426145343-a29dc8fdc734 // indirect
+	golang.org/x/net v0.0.0-20190503192946-f4e77d36d62c
+	golang.org/x/text v0.3.2 // indirect
 	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4 // indirect
+	golang.org/x/tools v0.0.0-20190506145303-2d16b83fe98c // indirect
 	google.golang.org/genproto v0.0.0-20180817151627-c66870c02cf8
 	google.golang.org/grpc v1.20.1
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
@@ -39,15 +43,15 @@ require (
 
 replace (
 	cloud.google.com/go => github.com/googleapis/google-cloud-go v0.26.0
-	golang.org/x/crypto => github.com/golang/crypto v0.0.0-20190123085648-057139ce5d2b
+	golang.org/x/crypto => github.com/golang/crypto v0.0.0-20190426145343-a29dc8fdc734
 	golang.org/x/lint => github.com/golang/lint v0.0.0-20181026193005-c67002cb31c3
-	golang.org/x/net => github.com/golang/net v0.0.0-20190311183353-d8887717615a
+	golang.org/x/net => github.com/golang/net v0.0.0-20190503192946-f4e77d36d62c
 	golang.org/x/oauth2 => github.com/golang/oauth2 v0.0.0-20180821212333-d2e6202438be
 	golang.org/x/sync => github.com/golang/sync v0.0.0-20181108010431-42b317875d0f
 	golang.org/x/sys => github.com/golang/sys v0.0.0-20180905080454-ebe1bf3edb33
-	golang.org/x/text => github.com/golang/text v0.3.0
+	golang.org/x/text => github.com/golang/text v0.3.2
 	golang.org/x/time => github.com/golang/time v0.0.0-20190308202827-9d24e82272b4
-	golang.org/x/tools => github.com/golang/tools v0.0.0-20190328211700-ab21143f2384
+	golang.org/x/tools => github.com/golang/tools v0.0.0-20190506145303-2d16b83fe98c
 	google.golang.org/appengine => github.com/golang/appengine v1.1.0
 	google.golang.org/genproto => github.com/google/go-genproto v0.0.0-20180817151627-c66870c02cf8
 	google.golang.org/grpc => github.com/grpc/grpc-go v1.20.1
