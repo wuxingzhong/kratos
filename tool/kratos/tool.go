@@ -12,6 +12,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/fatih/color"
 	"github.com/urfave/cli"
 )
@@ -113,6 +114,7 @@ func runTool(name, dir, cmd string, args []string) (err error) {
 		Stderr: os.Stderr,
 		Env:    os.Environ(),
 	}
+	spew.Dump(name, dir, cmd, args)
 	if filepath.Base(cmd) == cmd {
 		var lp string
 		if lp, err = exec.LookPath(cmd); err == nil {
@@ -182,27 +184,6 @@ func (t Tool) installed() bool {
 	return err == nil
 }
 
-func gopath() (gp string) {
-	gopaths := strings.Split(os.Getenv("GOPATH"), ":")
-	if len(gopaths) == 1 {
-		return gopaths[0]
-	}
-	pwd, err := os.Getwd()
-	if err != nil {
-		return
-	}
-	abspwd, err := filepath.Abs(pwd)
-	if err != nil {
-		return
-	}
-	for _, gopath := range gopaths {
-		absgp, err := filepath.Abs(gopath)
-		if err != nil {
-			return
-		}
-		if strings.HasPrefix(abspwd, absgp) {
-			return absgp
-		}
-	}
-	return build.Default.GOPATH
+func gopath() string {
+	return strings.Split(build.Default.GOPATH, ":")[0]
 }
