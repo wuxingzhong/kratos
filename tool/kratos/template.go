@@ -514,7 +514,6 @@ import "google/api/annotations.proto";
 // package 命名使用 {appid}.{version} 的方式, version 形如 v1, v2 ..
 package demo.service.v1;
 
-// NOTE: 最后请删除这些无用的注释 (゜-゜)つロ 
 
 option go_package = "api";
 option (gogoproto.goproto_getters_all) = false;
@@ -547,7 +546,7 @@ type Kratos struct {
 go 1.12
 
 require (
-	github.com/bilibili/kratos v0.1.0
+	gogs.sunniwell.net/sunniwell/kratos v0.1.1s
 	github.com/gogo/protobuf v1.2.1
 	github.com/golang/protobuf v1.3.1
 	golang.org/x/net v0.0.0-20190420063019-afa5a82059c6
