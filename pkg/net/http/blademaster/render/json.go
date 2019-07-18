@@ -12,9 +12,9 @@ var jsonContentType = []string{"application/json; charset=utf-8"}
 // JSON common json struct.
 type JSON struct {
 	Code    int         `json:"code"`
-	Message string      `json:"message"`
+	Message string      `json:"msg"`  //message--msg
 	TTL     int         `json:"ttl"`
-	Data    interface{} `json:"data,omitempty"`
+	Data    interface{} `json:"result,omitempty"`    //data--result
 }
 
 func writeJSON(w http.ResponseWriter, obj interface{}) (err error) {
