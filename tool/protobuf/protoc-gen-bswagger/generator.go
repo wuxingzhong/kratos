@@ -113,12 +113,12 @@ func (t *swaggerGen) generateSwagger(file *descriptor.FileDescriptorProto) *plug
 			}
 
 			// add Authorization header
-			p := swaggerParameterObject{}
-			p.In = "header"
-			p.Required = false
-			p.Name = "Authorization"
-			p.Type = "string"
-			op.Parameters = append(op.Parameters, p)
+			ph := swaggerParameterObject{}
+			ph.In = "header"
+			ph.Required = false
+			ph.Name = "Authorization"
+			ph.Type = "string"
+			op.Parameters = append(op.Parameters, ph)
 
 			// response
 			resp := swaggerResponseObject{}
